@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title>BuzzQuizz</title>
+</head>
+<body>
+    <header>
+        BuzzQuizz
+    </header>
+    <div class="conteinerTela3">
+        <p class="Começo desativar">Comece pelo começo</p>
+        <div class="criarPerguntas desativar">
+            <input type="text" size="35" value=" Titulo do quizz" class="caixaDigitavel" />
+            <input type="text" size="35" value=" URL da imagem do seu quizz" class="caixaDigitavel" />
+            <input type="text" size="35" value=" Quantidade de perguntas do seu quizz" class="caixaDigitavel" />
+            <input type="text" size="35" value=" Quantidade de níveis do quizz" class="caixaDigitavel" />
+        </div>
+        <button class="confirmarCriação desativar">
+            Prosseguir para criar perguntas
+        </button>
+        <p class="Crie desativar">Crie suas perguntas</p>
+        <div class="perguntasAbertas desativar">
+            <div class="duplaCaixas">
+                Pergunta 1
+                <input type="text" size="35" value=" Texto da pergunta" class="caixaDigitavel" />
+                <input type="text" size="35" value=" Cor de fundo" class="caixaDigitavel" />
+            </div>
+            <div class="duplaCaixas">
+                Resposta 
+                <input type="text" size="35" value=" Resposta correta" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem" class="caixaDigitavel" />
+            </div>
+            <div class="duplaCaixas">
+            Respostas incorretas
+                <input type="text" size="35" value=" Resposta correta 1" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem 1" class="caixaDigitavel" />
+            </div>
+            <div class="duplaCaixas">
+                <input type="text" size="35" value=" Resposta correta 2" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem 2" class="caixaDigitavel" />
+            </div>
+            <div class="duplaCaixas">
+                <input type="text" size="35" value=" Resposta correta 3" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem 3" class="caixaDigitavel" />
+            </div>
+        </div>
+        <div class="perguntasEditaveis desativar">
+            <p class="perguntaNum">Pergunta 2</p>
+            <ion-icon name="create-outline" class="icone"></ion-icon>
+        </div>
+        <div class="perguntasEditaveis desativar">
+            <p class="perguntaNum">Pergunta 3</p>
+            <ion-icon name="create-outline" class="icone"></ion-icon>
+        </div>
+        <button class="prosseguirNiveis desativar">
+            Prosseguir para níveis
+        </button>
+        <p class="Niveis desativar">Agora, decida os níveis</p>
+        <div class="NiveisAbertas desativar">
+            <div class="conteinerNiveis">
+                Nivel 1
+                <input type="text" size="35" value=" Título do nível" class="caixaDigitavel" />
+                <input type="text" size="35" value=" % de acerto mínima" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem nível" class="caixaDigitavel" />
+                <input type="text" size="35" value=" Descrição do nível" class="caixaDigitavel grande" />
+            </div>
+        </div>
+        <div class="NivelEditaveis desativar">
+            <p class="perguntaNum">Nivel 2</p>
+            <ion-icon name="create-outline" class="icone"></ion-icon>
+        </div>
+        <div class="NivelEditaveis desativar">
+            <p class="perguntaNum">Nivel 3</p>
+            <ion-icon name="create-outline" class="icone"></ion-icon>
+        </div>
+        <button class="FinalizarQuizz desativar">
+           Finalizar Quizz
+        </button>
+        <p class="pronto">Seu quizz está pronto!</p>
+        <div class="quizzpronto">
+            <p class="nomeQuizz"> Nome do quizz </p>
+        </div>
+        <div class="botões">
+        <button class="AcessarQuizz">
+            Acessar quizz
+         </button>
+         <button class="VoltarHome">
+            Voltar pra home
+         </button>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
