@@ -1,6 +1,6 @@
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #E5E5E5;
+    background-color: #fafafa;
   
 }
 
@@ -27,7 +27,7 @@ body{
 }
 
 .AllQuizzes{
-    width: 70%;
+    width: 71%;
     height: 100%;
     margin: 146px auto 0 auto;
 }
@@ -79,20 +79,19 @@ body{
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
-    margin-bottom: 12px;
 }
 
 .quizzes{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .quizz{
     width: 340px;
     height: 181px;
     position: relative;
-    margin-bottom: 25px;
+    margin: 15px 15px 0 0;
     cursor: pointer;
 }
 
