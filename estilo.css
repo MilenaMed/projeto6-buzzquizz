@@ -4,9 +4,140 @@ body{
   
 }
 
-/*________________________________________TELA1________________________________________/*
+*{
+    box-sizing: border-box;
+}
 
+/*________________________________________TELA1________________________________________*/
 
+.header{
+    background-color: #EC362D;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 69px;
+    font-size: 37px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    z-index: 1;
+}
+
+.AllQuizzes{
+    width: 70%;
+    height: 100%;
+    margin: 146px auto 0 auto;
+}
+
+.myQuizzes{
+    width: 100%;
+    height: 181px;
+
+    border: 1px dashed #D5D5D5;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 77px;
+}
+
+.myQuizzes h3{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #B9B9B9;
+}
+
+.createQuizz{
+    border: 1px dashed #EC362D;
+    border-radius: 50px;
+    background-color: #fafafa;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.createQuizz p{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    color: #EC362D;
+
+    margin: 2px 8px;
+}
+
+.apiQuizzes h2{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 12px;
+}
+
+.quizzes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.quizz{
+    width: 340px;
+    height: 181px;
+    position: relative;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.quizz img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.gradient{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
+    position: absolute;
+    padding: 0 20px 15px 20px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.gradient p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+@media (max-width: 500px){
+    .AllQuizzes{
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .myQuizzes{
+        margin-bottom: 35px;
+    }
+
+    .quizzes{
+        justify-content: center;
+    }
+}
 
 /*________________________________________TELA2________________________________________*/
 .corpo{
