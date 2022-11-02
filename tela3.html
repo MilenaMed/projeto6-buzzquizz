@@ -16,17 +16,56 @@
         BuzzQuizz
     </header>
     <div class="conteinerTela3">
-        Comece pelo começo
-        <div class="criarPerguntas">
+        <p class="Começo desativar">Comece pelo começo</p>
+        <div class="criarPerguntas desativar">
             <input type="text" size="35" value=" Titulo do quizz" class="caixaDigitavel" />
             <input type="text" size="35" value=" URL da imagem do seu quizz" class="caixaDigitavel" />
             <input type="text" size="35" value=" Quantidade de perguntas do seu quizz" class="caixaDigitavel" />
             <input type="text" size="35" value=" Quantidade de níveis do quizz" class="caixaDigitavel" />
         </div>
-        <button class="confirmar">
+        <button class="confirmarCriação desativar">
             Prosseguir para criar perguntas
         </button>
+        <p class="Crie desativar">Crie suas perguntas</p>
+        <div class="perguntasAbertas desativar">
+            <div class="duplaCaixas">
+                Pergunta 1
+                <input type="text" size="35" value=" Texto da pergunta" class="caixaDigitavel" />
+                <input type="text" size="35" value=" Cor de fundo" class="caixaDigitavel" />
+            </div>
+            <div class="duplaCaixas">
+                Resposta 
+                <input type="text" size="35" value=" Resposta correta" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem" class="caixaDigitavel" />
+            </div>
+            <div class="duplaCaixas">
+            Respostas incorretas
+                <input type="text" size="35" value=" Resposta correta 1" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem 1" class="caixaDigitavel" />
+            </div>
+            <div class="duplaCaixas">
+                <input type="text" size="35" value=" Resposta correta 2" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem 2" class="caixaDigitavel" />
+            </div>
+            <div class="duplaCaixas">
+                <input type="text" size="35" value=" Resposta correta 3" class="caixaDigitavel" />
+                <input type="text" size="35" value=" URL da imagem 3" class="caixaDigitavel" />
+            </div>
+        </div>
+        <div class="perguntasEditaveis desativar">
+            <p class="perguntaNum">Pergunta 2</p>
+            <ion-icon name="create-outline" class="icone"></ion-icon>
+        </div>
+        <div class="perguntasEditaveis desativar">
+            <p class="perguntaNum">Pergunta 3</p>
+            <ion-icon name="create-outline" class="icone"></ion-icon>
+        </div>
+        <button class="prosseguirNiveis desativar">
+            Prosseguir para níveis
+        </button>
+
     </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
