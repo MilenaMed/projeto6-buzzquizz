@@ -1,3 +1,33 @@
 body{
-    background-color: aqua;
+    font-family: 'Roboto', sans-serif;
+  
 }
+
+/*________________________________________TELA1________________________________________/*
+
+
+
+/*________________________________________TELA2________________________________________*/
+.cabecalhoSite{
+    width: auto;
+    height: 69px;
+    background-color: #EC362D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+font-weight: 700;
+font-size: 37px;
+color: #FFFFFF;
+}
+
+.cabecalhoQuizz{
+    Width:auto;
+    Height:227px;
+    background-color: blue;
+    object-fit: cover
+
+}
+
+/*________________________________________TELA3________________________________________*/
