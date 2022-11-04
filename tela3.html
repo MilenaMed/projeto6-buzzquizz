@@ -15,19 +15,21 @@
     <header>
         BuzzQuizz
     </header>
-    <div class="conteinerTela3">
-        <p class="Começo desativar">Comece pelo começo</p>
-        <div class="criarPerguntas desativar">
-            <input type="text" size="35" value=" Titulo do quizz" class="caixaDigitavel" />
-            <input type="text" size="35" value=" URL da imagem do seu quizz" class="caixaDigitavel" />
-            <input type="text" size="35" value=" Quantidade de perguntas do seu quizz" class="caixaDigitavel" />
-            <input type="text" size="35" value=" Quantidade de níveis do quizz" class="caixaDigitavel" />
+    <div class="conteinerTela31">
+        <p class="Começo">Comece pelo começo</p>
+        <div class="criarPerguntas">
+            <input type="text" size="35" value=" Titulo do quizz" id="Titulo" class="caixaDigitavel" />
+            <input type="text" size="35" value=" URL da imagem do seu quizz" id="imgURL" class="caixaDigitavel" />
+            <input type="text" size="35" value=" Quantidade de perguntas do seu quizz" id="qtdPerg" class="caixaDigitavel" />
+            <input type="text" size="35" value=" Quantidade de níveis do quizz" id="qtdNiveis" class="caixaDigitavel" />
         </div>
-        <button class="confirmarCriação desativar">
+        <button class="confirmarCriação" onclick="confirmarCriação(this)">
             Prosseguir para criar perguntas
         </button>
-        <p class="Crie desativar">Crie suas perguntas</p>
-        <div class="perguntasAbertas desativar">
+        </div>
+        <div class="conteinerTela32 desativar">
+        <p class="Crie">Crie suas perguntas</p>
+        <div class="perguntasAbertas">
             <div class="duplaCaixas">
                 Pergunta 1
                 <input type="text" size="35" value=" Texto da pergunta" class="caixaDigitavel" />
@@ -52,19 +54,21 @@
                 <input type="text" size="35" value=" URL da imagem 3" class="caixaDigitavel" />
             </div>
         </div>
-        <div class="perguntasEditaveis desativar">
+        <div class="perguntasEditaveis">
             <p class="perguntaNum">Pergunta 2</p>
             <ion-icon name="create-outline" class="icone"></ion-icon>
         </div>
-        <div class="perguntasEditaveis desativar">
+        <div class="perguntasEditaveis">
             <p class="perguntaNum">Pergunta 3</p>
             <ion-icon name="create-outline" class="icone"></ion-icon>
         </div>
-        <button class="prosseguirNiveis desativar">
+        <button class="prosseguirNiveis">
             Prosseguir para níveis
         </button>
-        <p class="Niveis desativar">Agora, decida os níveis</p>
-        <div class="NiveisAbertas desativar">
+    </div>
+    <div class="conteinerTela3-3 desativar">
+        <p class="Niveis">Agora, decida os níveis</p>
+        <div class="NiveisAbertas">
             <div class="conteinerNiveis">
                 Nivel 1
                 <input type="text" size="35" value=" Título do nível" class="caixaDigitavel" />
@@ -73,17 +77,19 @@
                 <input type="text" size="35" value=" Descrição do nível" class="caixaDigitavel grande" />
             </div>
         </div>
-        <div class="NivelEditaveis desativar">
+        <div class="NivelEditaveis">
             <p class="perguntaNum">Nivel 2</p>
             <ion-icon name="create-outline" class="icone"></ion-icon>
         </div>
-        <div class="NivelEditaveis desativar">
+        <div class="NivelEditaveis">
             <p class="perguntaNum">Nivel 3</p>
             <ion-icon name="create-outline" class="icone"></ion-icon>
         </div>
-        <button class="FinalizarQuizz desativar">
+        <button class="FinalizarQuizz">
            Finalizar Quizz
         </button>
+    </div>
+    <div class="conteinerTela3-3 desativar">
         <p class="pronto">Seu quizz está pronto!</p>
         <div class="quizzpronto">
             <p class="nomeQuizz"> Nome do quizz </p>
@@ -96,8 +102,8 @@
             Voltar pra home
          </button>
         </div>
-
     </div>
+</div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
 </body>
