@@ -140,6 +140,7 @@ body{
 
 /*________________________________________TELA2________________________________________*/
 .corpo{
+    width: 100%;
     display: flex;
     flex-direction:column;  
 
@@ -165,10 +166,12 @@ color: #FFFFFF;
 }
 
 .cabecalhoQuizz{
+    margin-top: 69px;
     Width:100%;
     Height:227px;
     background-color: blue;
-    object-fit: cover
+    object-fit: cover;
+    
 
 }
 .container{
@@ -181,7 +184,7 @@ color: #FFFFFF;
     
     }
     .caixaPergunta{
-        margin-top: 42px;
+    margin-top: 42px;
     Width:759px;
     Height:676px;
     background-color: green;
@@ -207,6 +210,7 @@ color: #FFFFFF;
         grid-template-columns: 330px 330px ;
         gap:25px;
         padding:10px 37px 35px 38px;
+        background-color: violet;
 
     }
 
@@ -251,6 +255,8 @@ color: #FFFFFF;
     }
 
     .ResultadoFinalImagem{
+        width: 364px;
+        height: 273px;
         margin-right:21px ;
     }
 
@@ -285,35 +291,87 @@ text-decoration: none;
 }
 
 @media (max-width: 500px){
-    .cabecalhoQuizz{
-        Width:100%;
-        Height:142px;
-        background-color: pink;
-        object-fit: cover
-    
-    }
+
     .container{
-        Width: auto;
-        Height:100%;
-        background-color:  #E5E5E5;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        }
+       background-color: #434CA0;
+
+    }
+
+    .cabecalhoQuizz{     
+        Height:142px;
+
+    }   
     
-    
-        .caixaPergunta{
-            margin-top: 42px;
-            Width: 375px;
-            Height: 436px;
-        background-color: green;
-        }
+    .caixaPergunta{            
+        Width: 375px;
+        Height: 436px;           
+
+    }
    
+    .cabecalhoPergunta{            
+        Height: 89px;   
+
+    }
+
+    .tituloPergunta{
+        text-align:center;
+        font-size: 19px;        
+
+    }
+
+    .caixarespostas{        
+        display: grid;
+        grid-template-columns: 163px 163px ;
+        gap:12px;
+        padding:18px;       
+
+    }
+
+    .imgResposta{
+        margin-top:13px;
+        Width:163px;
+        Height:113px;
+
+    }
+
+    .resultado{        
+        Width:375px;
+        Height:500px;         
+                
+    }
+
+    .cabecalhoResultado{
+        text-align:center;        
+        Width: 340px;       
+        padding: 16px;
+        
+    }
+    
+    .tituloResultado{        
+        font-Size:19px;
+      
+    }
+        
+    .img-texto-resultado{        
+        flex-direction: column;     
+              
+    }
+    
+    .ResultadoFinalImagem{
+        width: 340px;
+        height: 255px;
+        margin-bottom: 9px;
+
+    }
+    
+    .ResultadoFinalTexto{
+        width: 340px;
+        height: 255px;
+        font-Size:17px;                
+                   
+    }
+
 }
-
-
-
     
     /*________________________________________TELA3________________________________________*/
 header{
