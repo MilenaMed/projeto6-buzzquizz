@@ -146,12 +146,17 @@ body{
     
 }
 .cabecalhoSite{
-    width: auto;
-    height: 69px;
     background-color: #EC362D;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 69px;
+    font-size: 37px;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
 }
 h1{
 font-weight: 700;
@@ -160,7 +165,7 @@ color: #FFFFFF;
 }
 
 .cabecalhoQuizz{
-    Width:auto;
+    Width:100%;
     Height:227px;
     background-color: blue;
     object-fit: cover
@@ -278,6 +283,37 @@ color:#818181;
 margin-bottom: 85px;
 text-decoration: none;
 }
+
+@media (max-width: 500px){
+    .cabecalhoQuizz{
+        Width:100%;
+        Height:142px;
+        background-color: pink;
+        object-fit: cover
+    
+    }
+    .container{
+        Width: auto;
+        Height:100%;
+        background-color:  #E5E5E5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        }
+    
+    
+        .caixaPergunta{
+            margin-top: 42px;
+            Width: 375px;
+            Height: 436px;
+        background-color: green;
+        }
+   
+}
+
+
+
     
     /*________________________________________TELA3________________________________________*/
 .banana{
