@@ -316,7 +316,7 @@ text-decoration: none;
 
     
     /*________________________________________TELA3________________________________________*/
-.banana{
+header{
     background-color: #EC362D;
     color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -329,7 +329,29 @@ text-decoration: none;
     justify-content: center;
     position: fixed;
 }
-.conteinerTela3{
+.conteinerTela31{
+    padding-top: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    color: black;
+    font-weight: 700;
+    font-size: 23px;
+}
+.conteinerTela32{
+    padding-top: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    color: black;
+    font-weight: 700;
+    font-size: 23px;
+}
+.conteinerTela3-3{
     padding-top: 110px;
     width: 100%;
     display: flex;
@@ -511,7 +533,7 @@ text-decoration: none;
 }
 .VoltarHome{
     border: none;
-    background-color: #E5E5E5;
+    background-color: #fafafa;
     font-size: 21px;
     color: #818181;
 }
