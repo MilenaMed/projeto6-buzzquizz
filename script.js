@@ -3,11 +3,12 @@
 const urlAPI = 'https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes';
 let id;
 
-getAPI()
+getAPI();
 
 function getAPI(){
     const promisse = axios.get(`${urlAPI}`);
     promisse.then(renderQuizzes);
+    
 }
 
 function renderQuizzes(res){
@@ -37,6 +38,10 @@ function playQuizz(id){
 function renderQuizz(res){
     window.location = "tela2.html";
     const quizz = res.data;
+}
+
+function criarQuiz(){
+    window.location = "tela3.html";
 }
 
 /*________________________________________TELA3________________________________________*/
