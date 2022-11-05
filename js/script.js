@@ -229,3 +229,29 @@ function requisitosPerguntas(){
 // ao cliclar no editavel abrir perguntas
 // seguir requisitos do trello
 // só passar para níveis com perguntas todas cumprindo os requisitos
+
+/* --------Criação de niveis--------*/
+
+function openLevels(level){
+
+    let numLevel = document.querySelector('.nivelNum').innerHTML.replace("Nivel","");
+
+    let layout = `
+    <div class="conteinerNiveis">
+        Nivel${numLevel}
+        <input type="text" size="35" placeholder=" Título do nível${numLevel}" class="caixaDigitavel" />
+        <input type="text" size="35" placeholder=" % de acerto mínima" class="caixaDigitavel" />
+        <input type="text" size="35" placeholder=" URL da imagem nível${numLevel}" class="caixaDigitavel" />
+        <input type="text" size="35" placeholder=" Descrição do nível${numLevel}" class="caixaDigitavel grande" />
+    </div>`
+
+    if(level.innerHTML !== layout){
+        level.innerHTML = "";
+        level.innerHTML += layout;
+        level.removeAttribute('onclick');
+    }
+}
+
+function requestLevels(){
+    
+}
