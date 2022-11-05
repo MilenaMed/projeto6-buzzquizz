@@ -57,6 +57,17 @@ function renderQuizz(res){
     const quizz = res.data;
     
     console.log(res);
+
+    tela2.innerHTML = "";
+    tela2.innerHTML += `
+         <div class="cabecalhoQuizz">
+            <div class="gradient">
+                <h2>${quizz.title}</h2>
+            </div>
+         <img src="${quizz.image}"/>
+          </div>`
+
+    
 }
 
 function criarQuiz(){
