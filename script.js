@@ -45,6 +45,7 @@ function renderQuizzes(res){
 function playQuizz(id){
     const promisse = axios.get(`${urlAPI}/${id}`);
     promisse.then(renderQuizz);
+    console.log(id)
 }
 
 /*________________________________________TELA2________________________________________*/
@@ -54,9 +55,7 @@ function renderQuizz(res){
     const quizz = res.data;
 }
 
-function criarQuiz(){
-    window.location = "tela3.html";
-}
+
 
 /*________________________________________TELA3________________________________________*/
 
