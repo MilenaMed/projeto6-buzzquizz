@@ -58,8 +58,7 @@ function renderQuizz(res){
     const quizz = res.data;
     
     console.log(res);
-
-    tela2.innerHTML = "";
+   
     tela2.innerHTML += `
          <div class="cabecalhoQuizz">
             <div class="gradient">
@@ -68,8 +67,46 @@ function renderQuizz(res){
          <img src="${quizz.image}"/>
           </div>`
 
+
+console.log(res.data.questions)
+
+for(indice= 0 ; indice < res.data.questions.length ; indice++){
+    tela2.innerHTML += `
+    <div class="container">
     
+                <div class="caixaPergunta">
+    
+                    <div class="cabecalhoPergunta">
+                        <span class="tituloPergunta">${res.data.questions.title}</span>
+                    </div>
+    
+    </div
+    
+        
+    ` 
 }
+tela2.innerHTML += 
+
+`<div class="container">
+<div class="resultado">
+<div class="cabecalhoResultado">
+                <span class="tituloResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</span>
+             </div>
+            <div class="img-texto-resultado">
+                <img class= ResultadoFinalImagem src="Imagens/image 10.png">
+        
+                <div class="ResultadoFinalTexto">
+                <span >Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</span>
+            </div>
+            </div>
+            </div>
+            </div>`
+
+
+  
+}
+
+
 
 function criarQuiz(){
     //window.location = "tela3.html";
