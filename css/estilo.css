@@ -152,7 +152,7 @@ body{
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 500px){
@@ -335,6 +335,7 @@ color: #FFFFFF;
     }
 
 @media (max-width: 500px){
+
 
         .container{
             background-color: #434CA0;
