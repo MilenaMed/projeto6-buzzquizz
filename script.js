@@ -11,20 +11,34 @@ function getAPI(){
     
 }
 
+function createQuizz(){
+    window.location = "tela3.html";
+}
+
+function changeLayout(){
+    const myQuizzes = document.querySelector('.myQuizzes');
+    const ulMyQuizzes = document.querySelector('.ulMyQuizzes');
+    const myQuizzesEmpty = document.querySelector('.myQuizzesEmpty');
+
+    if(ulMyQuizzes.innerHTML !== null){
+        myQuizzes.classList.remove('hidden');
+        myQuizzesEmpty.classList.add('hidden');
+    }
+}
+
 function renderQuizzes(res){
     const liQuizzes = res.data;
     const ulQuizzes = document.querySelector('.quizzes');
 
-    ulQuizzes.innerHTML = "";
-
     for(let i = 0; i < liQuizzes.length; i++){
         let quizz = liQuizzes[i];
-        ulQuizzes.innerHTML += `
+        let layout = `
         <li onclick="playQuizz(${quizz.id})" class="quizz">
             <div class="gradient"><p>${quizz.title}</p></div>
             <img src="${quizz.image}" alt="">
         </li> 
         `
+        ulQuizzes.innerHTML += layout;
     }
 }
 
