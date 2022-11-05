@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>BuzzQuizz</title>
+</head>
+
+<body>
+<!-------------------------------------------------------CABEÇALHO------------------------------------------------------------->
+    <header class="header">BuzzQuizz</header>
+
+<!----------------------------------------------------------TELA 1------------------------------------------------------------->
+    <main class="AllQuizzes tela1">
+        <div class="myQuizzesEmpty">
+            <h3>Você não criou nenhum <br> quizz ainda :(</h3>
+            <button onclick="createQuizz()" class="createQuizz"><p>Criar Quizz</p></button>
+        </div>
+
+        <div class="myQuizzes hidden">
+            <div class="title">
+                <h2>Seus Quizzes</h2>
+                <ion-icon  onclick="createQuizz()" name="add-circle-sharp"></ion-icon>
+            </div>
+            <ul class="ulMyQuizzes">
+            <ul>
+        </div>
+
+        <div class="apiQuizzes">
+            <h2>Todos os Quizzes</h2>
+
+            <ul class="quizzes">
+            </ul>
+        </div>
+    </main>
+    
+<!-----------------------------------------------------------TELA 2------------------------------------------------------------>
+    <div class="corpo tela2 hidden">
+
+        <div class="cabecalhoQuizz">
+        </div>
+    <!--FIM DIV CABECALHOQUIZ-->
+
+        <div class="container">
+
+            <div class="caixaPergunta">
+
+                <div class="cabecalhoPergunta">
+                    <span class="tituloPergunta">Em qual animal Olho-Tonto Moody transfigurou Malfoy?</span>
+                </div>
+
+                <div class="caixarespostas">
+
+                    <div class="resposta">
+                        <img class="imgResposta" src="Imagens/hogwarts-castle-.jpg">
+                        <span class="textoResposta">Gatíneo</span> 
+                    </div>
+
+                    <div class="resposta">
+                        <img class="imgResposta" src="Imagens/hogwarts-castle-.jpg">
+                        <span class="textoResposta">Gatíneo</span> 
+                    </div>
+
+                    <div class="resposta">
+                        <img class="imgResposta" src="Imagens/hogwarts-castle-.jpg">
+                        <span class="textoResposta">Gatíneo</span> 
+                    </div>
+
+                    <div class="resposta">
+                        <img class="imgResposta" src="Imagens/hogwarts-castle-.jpg">
+                        <span class="textoResposta">Gatíneo</span> 
+                    </div>
+
+                </div>
+                <!--FIM CAIXARESPOSTAS-->
+
+                </div>
+            <!--FIM DIV CAIXAPERGUNTA-->
+
+            <div class="resultado">
+                <div class="cabecalhoResultado">
+                    <span class="tituloResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</span>
+                 </div>
+                <div class="img-texto-resultado">
+                    <img class= ResultadoFinalImagem src="Imagens/image 10.png">
+            
+                    <div class="ResultadoFinalTexto">
+                    <span >Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</span>
+                </div>
+                </div>
+            </div>
+
+
+
+            <button class="ReiniciarQuiz"><p class="dentrobotao">Reiniciar Quiz</p></button>
+            <a class="VoltarHome" href="tela1.html"> Voltar para Home </a>
+
+        </div>
+    <!--FIM DIV CONTAINER-->
+    </div>
+    <!--FIM DIV CORPO-->
+
+<!-----------------------------------------------------------TELA 3------------------------------------------------------------>
+
+</body>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./js/script.js"></script>
+</html>

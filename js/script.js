@@ -2,6 +2,8 @@
 
 const urlAPI = 'https://mock-api.driven.com.br/api/v3/buzzquizz/quizzes';
 let id;
+const tela1 = document.querySelector('.tela1');
+const tela2 = document.querySelector('.tela2');
 
 getAPI();
 
@@ -51,11 +53,27 @@ function playQuizz(id){
 /*________________________________________TELA2________________________________________*/
 
 function renderQuizz(res){
-    window.location = "tela2.html";
+    tela1.classList.add('hidden');
+    tela2.classList.remove('hidden');
     const quizz = res.data;
+    
+    console.log(res);
+
+    tela2.innerHTML = "";
+    tela2.innerHTML += `
+         <div class="cabecalhoQuizz">
+            <div class="gradient">
+                <h2>${quizz.title}</h2>
+            </div>
+         <img src="${quizz.image}"/>
+          </div>`
+
+    
 }
 
-
+function criarQuiz(){
+    //window.location = "tela3.html";
+}
 
 /*________________________________________TELA3________________________________________*/
 
