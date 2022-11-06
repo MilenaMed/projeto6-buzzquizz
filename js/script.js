@@ -58,23 +58,24 @@ function renderQuizz(res){
     const quizz = res.data;
     
     //Coloca o cabeçalho do quizz / imagem e título   
-    tela2.innerHTML +=  
+    const cabecalho = document.querySelector(".cabecalhoQuizz")
+    cabecalho.innerHTML +=  
     `                            
-         <div class="cabecalhoQuizz">
             <div class="gradient">
                 <h2>${quizz.title}</h2>
             </div>
-         <img src="${quizz.image}"/>
-          </div>
+                <img src="${quizz.image}"/>          
     `
 
 
 //Cria a quantidade de caixas de perguntas e coloca o título 
 for(indice= 0 ; indice < quizz.questions.length ; indice++){  
-        
-    tela2.innerHTML += 
+
+
+     const container = document.querySelector(".container")    
+     container.innerHTML += 
     `
-        <div class="container">    
+            
             <div class="caixaPergunta">  
 
                 <div class="cabecalhoPergunta">
@@ -84,10 +85,11 @@ for(indice= 0 ; indice < quizz.questions.length ; indice++){
                 </div>
 
                 <div class="caixarespostas">
-                </div>
+                </div> 
+                
 
             </div>    
-        </div>
+        
     `                
 }
 
@@ -103,8 +105,8 @@ function comparador() {
 for (let i=0;i<quizz.questions.answers.length;i++){
 
         const caixaRespostas = document.querySelector(".caixarespostas")
-        
         caixaRespostas.innerHTML +=
+        
         `
 
         <div class="resposta">

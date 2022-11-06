@@ -276,12 +276,14 @@ color: #FFFFFF;
         color: #FFFFFF;
     }
 
-    .caixarespostas{        
+    .caixarespostas{       
+        width: 100%; 
+        height: 505px;
         display: grid;
         grid-template-columns: 330px 330px ;
         gap:25px;
         padding:10px 37px 35px 38px;
-        background-color: #FFFFFF;
+        background-color: red;
 
     }
 
@@ -353,7 +355,7 @@ color: #FFFFFF;
         color: #FFF5F4;
     }
 
-    .VoltarHome{
+    .VoltarHome2{
         height:400;
         Size:21px;
         color:#818181;
