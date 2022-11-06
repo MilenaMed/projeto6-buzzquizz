@@ -118,33 +118,35 @@ for (let i=0;i<quizz.questions.answers.length;i++){
         `
 }
 
+}
 
-tela2.innerHTML += 
+//Gera o resultado
+function GerarResultado(){
 
-`
-<div class="container">
-    <div class="resultado">
+   //Gera o Título   
+//const tituloResultado = document.querySelector(".tituloResultado")
+//tituloResultado.innerHTML += "" ;
+//tituloResultado.innerHTML += ${};
 
-        <div class="cabecalhoResultado">
-            <span class="tituloResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</span>
-        </div>
+   //Gera a Imagem   
+//const ImagemResultado = document.querySelector(".ResultadoFinalImagem")
+//ImagemResultado.innerHTML += "" ;
+//ImagemResultado.innerHTML += ${};
 
-        <div class="img-texto-resultado">
+   //Gera o Texto  
+//const TextoResultado = document.querySelector(".FinalTexto")
+//TextoResultado.innerHTML += "" ;
+//TextoResultado.innerHTML += ${};
 
-            <img class= ResultadoFinalImagem src="Imagens/image 10.png">
+}
 
-            <div class="ResultadoFinalTexto">
-                <span >Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</span>
-            </div>
-        </div>
-    </div>
-</div>
-            
-`  
+function VoltarHome2(){
+    window.location = "index.html";
+}
 
-
-
-
+function ReiniciarQuiz(){
+    
+    
 }
 
 /*________________________________________TELA3________________________________________*/

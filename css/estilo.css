@@ -186,8 +186,9 @@ body{
 .corpo{
     width: 100%;
     display: flex;
+    align-items: center;
     flex-direction:column;  
-
+background-color: #E5E5E5;
     
 }
 .cabecalhoSite{
@@ -367,7 +368,7 @@ color: #FFFFFF;
 
 
         .container{
-            background-color: #434CA0;
+            background-color: #E5E5E5;
 
         }
 
@@ -393,7 +394,8 @@ color: #FFFFFF;
 
         }
 
-        .caixarespostas{        
+        .caixarespostas{  
+            height: 315px;      
             display: grid;
             grid-template-columns: 163px 163px ;
             gap:12px;
