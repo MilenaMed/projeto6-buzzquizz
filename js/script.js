@@ -47,7 +47,7 @@ function renderQuizzes(res){
 function playQuizz(id){
     const promisse = axios.get(`${urlAPI}/${id}`);
     promisse.then(renderQuizz);
-    console.log(id)
+    //console.log(id)
 }
 
 /*________________________________________TELA2________________________________________*/
@@ -57,59 +57,92 @@ function renderQuizz(res){
     tela2.classList.remove('hidden');
     const quizz = res.data;
     
-    console.log(res);
-   
-    tela2.innerHTML += `
+    //Coloca o cabeçalho do quizz / imagem e título   
+    tela2.innerHTML +=  
+    `                            
          <div class="cabecalhoQuizz">
             <div class="gradient">
                 <h2>${quizz.title}</h2>
             </div>
          <img src="${quizz.image}"/>
-          </div>`
+          </div>
+    `
 
 
-console.log(res.data.questions)
-
-for(indice= 0 ; indice < res.data.questions.length ; indice++){
-    tela2.innerHTML += `
-    <div class="container">
-    
-                <div class="caixaPergunta">
-    
-                    <div class="cabecalhoPergunta">
-                        <span class="tituloPergunta">${res.data.questions.title}</span>
-                    </div>
-    
-    </div
-    
+//Cria a quantidade de caixas de perguntas e coloca o título 
+for(indice= 0 ; indice < quizz.questions.length ; indice++){  
         
-    ` 
+    tela2.innerHTML += 
+    `
+        <div class="container">    
+            <div class="caixaPergunta">  
+
+                <div class="cabecalhoPergunta">
+
+                    <span class="tituloPergunta">${quizz.questions[indice].title}</span>
+
+                </div>
+
+                <div class="caixarespostas">
+                </div>
+
+            </div>    
+        </div>
+    `                
 }
+
+//console.log(quizz.questions[0].answers)
+
+
+//função para misturar as respostas
+function comparador() { 
+    return (Math.random() - 0.5) }
+
+    
+//Gera as respostas das perguntas sortidas
+for (let i=0;i<quizz.questions.answers.length;i++){
+
+        const caixaRespostas = document.querySelector(".caixarespostas")
+        
+        caixaRespostas.innerHTML +=
+        `
+
+        <div class="resposta">
+            <img class="imgResposta" src="${quizz.questions[indice].answers[i].image}">
+            <span class="textoResposta">src="${quizz.questions[indice].answers[i].text}</span> 
+        </div>
+        
+        
+        `
+}
+
+
 tela2.innerHTML += 
 
-`<div class="container">
-<div class="resultado">
-<div class="cabecalhoResultado">
-                <span class="tituloResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</span>
-             </div>
-            <div class="img-texto-resultado">
-                <img class= ResultadoFinalImagem src="Imagens/image 10.png">
-        
-                <div class="ResultadoFinalTexto">
+`
+<div class="container">
+    <div class="resultado">
+
+        <div class="cabecalhoResultado">
+            <span class="tituloResultado">88% de acerto: Você é praticamente um aluno de Hogwarts!</span>
+        </div>
+
+        <div class="img-texto-resultado">
+
+            <img class= ResultadoFinalImagem src="Imagens/image 10.png">
+
+            <div class="ResultadoFinalTexto">
                 <span >Parabéns Potterhead! Bem-vindx a Hogwarts, aproveite o loop infinito de comida e clique no botão abaixo para usar o vira-tempo e reiniciar este teste.</span>
             </div>
-            </div>
-            </div>
-            </div>`
+        </div>
+    </div>
+</div>
+            
+`  
 
 
-  
-}
 
 
-
-function criarQuiz(){
-    //window.location = "tela3.html";
 }
 
 /*________________________________________TELA3________________________________________*/
