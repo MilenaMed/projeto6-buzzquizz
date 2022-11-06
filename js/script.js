@@ -273,21 +273,91 @@ function perguntasNosRequisitos(){
 
 }
 
+
 /* --------Criação de niveis--------*/
 
-function openLevels(level) {
+//let nNiveis = parseInt(qtddNiveis.value);
+let nNiveis = 3;
 
-    let numLevel = document.querySelector('.nivelNum').innerHTML.replace("Nivel", "");
+
+addLevels()
+//Função que adiciona a quantidade de niveis escolhidos pelo usuario
+function addLevels(){
+
+    const telaNiveis = document.querySelector('.levels');
+
+    for(let i = 0; i < nNiveis; i++){
+        let layout = `
+        <div onclick="openLevel${i+1}(this)" class="NivelEditaveis">
+            <p class="nivelNum">Nivel ${i+1}</p>
+            <ion-icon name="create-outline" class="icone"></ion-icon>
+        </div>
+    `
+    telaNiveis.innerHTML += layout;
+    }
+
+    telaNiveis.innerHTML += `
+        <button onclick="requestLevels()" class="FinalizarQuizz">
+            Finalizar Quizz
+        </button>
+    `
+
+}
+
+//funções que ao clicar adiciona os inputs
+function openLevel1(level){
+
+    let numLevel = document.querySelector('.nivelNum').innerHTML.replace("Nivel","");
 
     let layout = `
-    <div class="conteinerNiveis">
+    <div class="conteinerNiveis nivel1">
         Nivel${numLevel}
-        <input type="text" size="35" placeholder=" Título do nível${numLevel}" class="caixaDigitavel" />
-        <input type="text" size="35" placeholder=" % de acerto mínima" class="caixaDigitavel" />
-        <input type="text" size="35" placeholder=" URL da imagem nível${numLevel}" class="caixaDigitavel" />
-        <input type="text" size="35" placeholder=" Descrição do nível${numLevel}" class="caixaDigitavel grande" />
+        <input id="titleLevel" type="text" size="35" placeholder=" Título do nível${numLevel}" class="caixaDigitavel" />
+        <input id="hitLevel" type="text" size="35" placeholder=" % de acerto mínima" class="caixaDigitavel" />
+        <input id="urlLevel" type="text" size="35" placeholder=" URL da imagem nível${numLevel}" class="caixaDigitavel" />
+        <input id="descriptionLevel" type="text" size="35" placeholder=" Descrição do nível${numLevel}" class="caixaDigitavel grande" />
     </div>`
 
+    if(level.innerHTML !== layout){
+        level.innerHTML = "";
+        level.innerHTML += layout;
+        level.removeAttribute('onclick');
+    }
+}
+
+function openLevel2(level){
+
+    let numLevel = document.querySelector('.nivelNum').innerHTML.replace("Nivel","");
+    
+    let layout = `
+    <div class="conteinerNiveis nivel2">
+        Nivel${numLevel}
+        <input id="titleLevel" type="text" size="35" placeholder=" Título do nível${numLevel}" class="caixaDigitavel" />
+        <input id="hitLevel" type="text" size="35" placeholder=" % de acerto mínima" class="caixaDigitavel" />
+        <input id="urlLevel" type="text" size="35" placeholder=" URL da imagem nível${numLevel}" class="caixaDigitavel" />
+        <input id="descriptionLevel" type="text" size="35" placeholder=" Descrição do nível${numLevel}" class="caixaDigitavel grande" />
+    </div>`
+    
+    if(level.innerHTML !== layout){
+        level.innerHTML = "";
+        level.innerHTML += layout;
+        level.removeAttribute('onclick');
+    }
+}
+
+function openLevel3(level){
+    
+    let numLevel = document.querySelector('.nivelNum').innerHTML.replace("Nivel", "");
+    
+    let layout = `
+    <div class="conteinerNiveis nivel3">
+        Nivel${numLevel}
+        <input id="titleLevel" type="text" size="35" placeholder=" Título do nível${numLevel}" class="caixaDigitavel" />
+        <input id="hitLevel" type="text" size="35" placeholder=" % de acerto mínima" class="caixaDigitavel" />
+        <input id="urlLevel" type="text" size="35" placeholder=" URL da imagem nível${numLevel}" class="caixaDigitavel" />
+        <input id="descriptionLevel" type="text" size="35" placeholder=" Descrição do nível${numLevel}" class="caixaDigitavel grande" />        
+    </div>`
+    
     if (level.innerHTML !== layout) {
         level.innerHTML = "";
         level.innerHTML += layout;
@@ -295,6 +365,92 @@ function openLevels(level) {
     }
 }
 
-function requestLevels() {
+//validação
+function requestLevels(){
+    let title, hit, url, description, hits = false;
+    const titleLevel = document.querySelector('#titleLevel');
+    const hitLevel = document.querySelector('#hitLevel');
+    const urlLevel = document.querySelector('#urlLevel');
+    const descriptionLevel = document.querySelector('#descriptionLevel');
 
+
+    if(10 <= titleLevel.value.length){
+        title = true;
+    }else{
+     alert('O titulo precisa no minimo 10 caracteres');
+    }
+
+    if((hitLevel.value >= 0) && (hitLevel.value <= 100)){
+        hit = true;
+    }else{
+        alert('Insira um número de 0 a 100');
+        hitLevel.value = "";
+    }
+
+    if(checkURL(urlLevel.value)){
+        url = true
+    }else{
+        alert('Insira uma URL válida');
+        urlLevel.value = "";
+    }
+
+    if(30 <= descriptionLevel.value.length){
+        description = true;
+    }else{
+        alert('A descrição precisa ter no minimo 30 caracteres');
+        descriptionLevel.value = "";
+    }
+
+    if(nNiveis == 2){
+        const nivel1 = document.querySelector('.nivel1');
+        const nivel2 = document.querySelector('.nivel2');
+    
+        const hit1 = nivel1.querySelector('#hitLevel');
+        const hit2 = nivel2.querySelector('#hitLevel');
+
+        if ((hit1.value == 0) || (hit2.value == 0)){
+            hits = true;
+        }else{
+            alert("Em um dos niveis é obrigatorio que a % de acertos seja 0")
+        }
+    }
+
+    if(nNiveis == 3){
+        const nivel1 = document.querySelector('.nivel1');
+        const nivel2 = document.querySelector('.nivel2');
+        const nivel3 = document.querySelector('.nivel3');
+
+        const hit1 = nivel1.querySelector('#hitLevel');
+        const hit2 = nivel2.querySelector('#hitLevel');
+        const hit3 = nivel3.querySelector('#hitLevel');
+
+        if ((hit1.value == 0) || (hit2.value == 0) || (hit3.value == 0)){
+            hits = true;
+        }else{
+            alert("Em um dos niveis é obrigatorio que a % de acertos seja 0")
+        }
+    }
+
+
+    if(title == true && hit == true && url == true && description == true && hits == true){
+        endQuizz();
+    }
+
+}
+
+function endQuizz(){
+    const finishQuizz = document.querySelector('.end');
+    const telaNiveis = document.querySelector('.levels');
+
+    finishQuizz.classList.remove('desativar');
+    telaNiveis.classList.add('desativar');
+}
+
+function checkURL(string){
+    try {
+        let url = new URL(string)
+        return true
+      } catch(err) {
+          return false
+      }
 }
