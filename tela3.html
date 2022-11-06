@@ -15,13 +15,13 @@
     <header>
         BuzzQuizz
     </header>
-    <div class="conteinerTela31 desativar">
+    <div class="conteinerTela31">
         <p class="Começo">Comece pelo começo</p>
         <div class="criarPerguntas">
-            <input type="text" size="35" value=" Titulo do quizz" id="Titulo" class="caixaDigitavel" />
-            <input type="text" size="35" value=" URL da imagem do seu quizz" id="imgURL" class="caixaDigitavel" />
-            <input type="text" size="35" value=" Quantidade de perguntas do seu quizz" id="qtdPerg" class="caixaDigitavel" />
-            <input type="text" size="35" value=" Quantidade de níveis do quizz" id="qtdNiveis" class="caixaDigitavel" />
+            <input type="text" size="35" placeholder=" Titulo do quizz" id="Titulo" class="caixaDigitavel" />
+            <input type="text" size="35" placeholder=" URL da imagem do seu quizz" id="imgURL" class="caixaDigitavel" />
+            <input type="text" size="35" placeholder=" Quantidade de perguntas do seu quizz" id="qtdPerg" class="caixaDigitavel" />
+            <input type="text" size="35" placeholder=" Quantidade de níveis do quizz" id="qtdNiveis" class="caixaDigitavel" />
         </div>
         <button class="confirmarCriação" onclick="confirmarCriação(this)">
             Prosseguir para criar perguntas
@@ -30,23 +30,23 @@
         <div class="conteinerTela32 desativar">
         <p class="Crie">Crie suas perguntas</p>
     </div>
-    <div class="conteinerTela3-3">
+    <div class="conteinerTela3-3 desativar">
         <p class="Niveis">Agora, decida os níveis</p>
         <div class="NiveisAbertas">
             <div class="conteinerNiveis">
                 Nivel 1
-                <input type="text" size="35" value=" Título do nível" class="caixaDigitavel" />
-                <input type="text" size="35" value=" % de acerto mínima" class="caixaDigitavel" />
-                <input type="text" size="35" value=" URL da imagem nível" class="caixaDigitavel" />
-                <input type="text" size="35" value=" Descrição do nível" class="caixaDigitavel grande" />
+                <input type="text" size="35" placeholder=" Título do nível" class="caixaDigitavel" />
+                <input type="text" size="35" placeholder=" % de acerto mínima" class="caixaDigitavel" />
+                <input type="text" size="35" placeholder=" URL da imagem nível" class="caixaDigitavel" />
+                <input type="text" size="35" placeholder=" Descrição do nível" class="caixaDigitavel grande" />
             </div>
         </div>
-        <div class="NivelEditaveis">
-            <p class="perguntaNum">Nivel 2</p>
+        <div onclick="openLevels(this)" class="NivelEditaveis">
+            <p class="nivelNum">Nivel 2</p>
             <ion-icon name="create-outline" class="icone"></ion-icon>
         </div>
-        <div class="NivelEditaveis">
-            <p class="perguntaNum">Nivel 3</p>
+        <div onclick="openLevels(this)" class="NivelEditaveis">
+            <p class="nivelNum">Nivel 3</p>
             <ion-icon name="create-outline" class="icone"></ion-icon>
         </div>
         <button class="FinalizarQuizz">
