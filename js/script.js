@@ -52,16 +52,12 @@ function playQuizz(id) {
 
 /*________________________________________TELA2________________________________________*/
 
-<<<<<<< HEAD
 
 
-function renderQuizz(res){
-=======
 function renderQuizz(res) {
->>>>>>> 6e87e6ddf1917a19b406f2324d6f59f87a8e6f3e
     tela1.classList.add('hidden');
     tela2.classList.remove('hidden');
-    
+
     const quizz = res.data;
 
     //Coloca o cabeçalho do quizz / imagem e título   
@@ -75,24 +71,14 @@ function renderQuizz(res) {
     `
 
 
-<<<<<<< HEAD
-//Cria a quantidade de caixas de perguntas e coloca o título 
-
-for(indice= 0 ; indice < quizz.questions.length ; indice++){
-    
-     const container = document.querySelector(".container")    
-     container.innerHTML += 
-    `
-            
-=======
     //Cria a quantidade de caixas de perguntas e coloca o título 
-    for (indice = 0; indice < quizz.questions.length; indice++) {
 
+    for (indice = 0; indice < quizz.questions.length; indice++) {
 
         const container = document.querySelector(".container")
         container.innerHTML +=
-            `   
->>>>>>> 6e87e6ddf1917a19b406f2324d6f59f87a8e6f3e
+            `
+            
             <div class="caixaPergunta">  
                 <div class="cabecalhoPergunta">
                     <span class="tituloPergunta">${quizz.questions[indice].title}</span>
@@ -102,20 +88,19 @@ for(indice= 0 ; indice < quizz.questions.length ; indice++){
                
             </div>    
         
-<<<<<<< HEAD
-    `  
-    console.log(quizz.questions[indice].answers)
-    
-    //Gera as respostas das perguntas 
-for (let i=0; i < quizz.questions[indice].answers.length; i++){
-
-    
-    
-    const caixaRespostas = document.querySelector(".caixarespostas")
-    caixaRespostas.innerHTML += ""
-    caixaRespostas.innerHTML += 
-    
     `
+        console.log(quizz.questions[indice].answers.length)
+
+        //Gera as respostas das perguntas 
+    for (let i = 0; i < quizz.questions[indice].answers.length; i++) {
+
+
+
+        const caixaRespostas = document.querySelectorAll(`.caixarespostas`)
+        console.log(caixaRespostas)
+        caixaRespostas[indice].innerHTML +=
+
+            `
 
     <div class="resposta">
         <img class="imgResposta" src="imagens/image 10.png">
@@ -124,47 +109,20 @@ for (let i=0; i < quizz.questions[indice].answers.length; i++){
     
     
   `
-        }
-    }    
-}
-=======
-    `
     }
->>>>>>> 6e87e6ddf1917a19b406f2324d6f59f87a8e6f3e
+    }
+    
+}
 
-    //console.log(quizz.questions[0].answers)
+//console.log(quizz.questions[0].answers)
 
 
-<<<<<<< HEAD
 //função para misturar as respostas
-function comparador() { 
-return (Math.random() - 0.5) }   
-
-=======
-    //função para misturar as respostas
-    function comparador() {
-        return (Math.random() - 0.5)
-    }
-
-
-    //Gera as respostas das perguntas sortidas
-    for (let i = 0; i < quizz.questions.answers.length; i++) {
-
-        const caixaRespostas = document.querySelector(".caixarespostas")
-        caixaRespostas.innerHTML +=
-
-            `
-        <div class="resposta">
-            <img class="imgResposta" src="${quizz.questions[indice].answers[i].image}">
-            <span class="textoResposta">src="${quizz.questions[indice].answers[i].text}</span> 
-        </div>
-        
-        
-        `
-    }
-
+function comparador() {
+    return (Math.random() - 0.5)
 }
->>>>>>> 6e87e6ddf1917a19b406f2324d6f59f87a8e6f3e
+
+
 
 //Gera o resultado
 function GerarResultado() {
@@ -219,7 +177,7 @@ function confirmarCriação(confirmar) {
 
     if (20 <= texto.value.length && texto.value.length < 65 && nPerguntas >= 3 && nNiveis >= 2 && false !== url) {
 
-        let objeto = {titulo: texto.value, image: imagURL.value }
+        let objeto = { titulo: texto.value, image: imagURL.value }
         ArrayObejtoParaEnviar.push(objeto)
 
         const $divContainerTela31 = document.querySelector('.conteinerTela31');
@@ -336,10 +294,11 @@ function requisitosPerguntas($divCompleta) {
                 conferirImagemRespondida(RespIncorreta3[i], imagURLIncorreta3[i])
             ) {
                 deucerto += 1
-                objetoPergunta = {title: textoPerg[i].value,
-				color: PergCor[i].value ,
-				answers:[]
-            };
+                objetoPergunta = {
+                    title: textoPerg[i].value,
+                    color: PergCor[i].value,
+                    answers: []
+                };
             }
         }
     }
@@ -348,7 +307,7 @@ function requisitosPerguntas($divCompleta) {
 
         let qtdObjetos = ArrayObejtoParaEnviar.length;
         let meuUltimoObjeto = ArrayObejtoParaEnviar.pop();
-        let objetoAtualizado = {...meuUltimoObjeto, id:qtdObjetos, questions:[...objetoPergunta]}
+        let objetoAtualizado = { ...meuUltimoObjeto, id: qtdObjetos, questions: [...objetoPergunta] }
         ArrayObejtoParaEnviar.push(objetoAtualizado)
 
     } else {
@@ -383,7 +342,7 @@ function perguntasNosRequisitos() {
     $divContainerTela32.classList.add('desativar');
     const $divContainerTela33 = document.querySelector('.conteinerTela33');
     $divContainerTela33.classList.remove('desativar');
-console.log(ArrayObejtoParaEnviar)
+    console.log(ArrayObejtoParaEnviar)
     openLevels(level)
 
 }
@@ -571,6 +530,6 @@ function checkURL(string) {
 }
 
 // CRIAÇÃO DO OBJETO PARAR ENVIO
-function oi(oi){
+function oi(oi) {
 
 }
