@@ -52,9 +52,12 @@ function playQuizz(id){
 
 /*________________________________________TELA2________________________________________*/
 
+
+
 function renderQuizz(res){
     tela1.classList.add('hidden');
     tela2.classList.remove('hidden');
+    
     const quizz = res.data;
     
     //Coloca o cabeçalho do quizz / imagem e título   
@@ -69,9 +72,9 @@ function renderQuizz(res){
 
 
 //Cria a quantidade de caixas de perguntas e coloca o título 
-for(indice= 0 ; indice < quizz.questions.length ; indice++){  
 
-
+for(indice= 0 ; indice < quizz.questions.length ; indice++){
+    
      const container = document.querySelector(".container")    
      container.innerHTML += 
     `
@@ -90,7 +93,29 @@ for(indice= 0 ; indice < quizz.questions.length ; indice++){
 
             </div>    
         
-    `                
+    `  
+    console.log(quizz.questions[indice].answers)
+    
+    //Gera as respostas das perguntas 
+for (let i=0; i < quizz.questions[indice].answers.length; i++){
+
+    
+    
+    const caixaRespostas = document.querySelector(".caixarespostas")
+    caixaRespostas.innerHTML += ""
+    caixaRespostas.innerHTML += 
+    
+    `
+
+    <div class="resposta">
+        <img class="imgResposta" src="imagens/image 10.png">
+        <span class="textoResposta">oioi</span> 
+    </div>
+    
+    
+  `
+        }
+    }    
 }
 
 //console.log(quizz.questions[0].answers)
@@ -98,27 +123,8 @@ for(indice= 0 ; indice < quizz.questions.length ; indice++){
 
 //função para misturar as respostas
 function comparador() { 
-    return (Math.random() - 0.5) }
+return (Math.random() - 0.5) }   
 
-    
-//Gera as respostas das perguntas sortidas
-for (let i=0;i<quizz.questions.answers.length;i++){
-
-        const caixaRespostas = document.querySelector(".caixarespostas")
-        caixaRespostas.innerHTML +=
-        
-        `
-
-        <div class="resposta">
-            <img class="imgResposta" src="${quizz.questions[indice].answers[i].image}">
-            <span class="textoResposta">src="${quizz.questions[indice].answers[i].text}</span> 
-        </div>
-        
-        
-        `
-}
-
-}
 
 //Gera o resultado
 function GerarResultado(){
